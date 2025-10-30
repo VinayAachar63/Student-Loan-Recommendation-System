@@ -1,0 +1,325 @@
+body {
+     /* Path to your background image */
+    background-size: cover; /* This makes sure the image covers the entire background */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the background fixed when scrolling */
+    background-position: center center; /* Centers the background image */
+    /* Add any other styles you already have for the body here */
+}
+
+/* To ensure readability, you might want to add a semi-transparent overlay */
+main.container {
+    background-color: rgba(255, 255, 255, 0.9); /* White with 90% opacity */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Or apply the background to a specific element that wraps your content */
+/* If you want the background only behind the main content, not the whole page */
+/* .site-header, .site-footer could also have a background-color to stand out */
+
+
+/* --- Professional UI Redesign --- */
+
+/* 1. Variables and Root Styles */
+:root {
+  --primary-color: #0d6efd;
+  --primary-hover: #0b5ed7;
+  --secondary-color: #6c757d;
+  --secondary-hover: #5c636a;
+  --success-color: #198754;
+  --light-bg: #f8f9fa;
+  --border-color: #dee2e6;
+  --text-color: #212529;
+  --text-muted: #6c757d;
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  --border-radius: 0.5rem; /* 8px */
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--light-bg);
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.container { max-width: 960px; margin: 0 auto; padding: 20px 15px; }
+
+/* 2. Header and Footer */
+.site-header {
+  background-color: #fff;
+  border-bottom: 1px solid var(--border-color);
+  padding: 10px 0;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.site-header .logo { display: flex; align-items: center; gap: 15px; }
+.site-header h1 { font-size: 1.5rem; margin: 0; color: var(--primary-color); font-weight: 600; }
+.site-header .logo .fa-graduation-cap { font-size: 2rem; color: var(--primary-color); }
+.site-footer { text-align: center; margin-top: 40px; padding: 20px 0; background-color: #fff; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.9rem; }
+
+/* 3. Card and Layout */
+.card { background: white; border-radius: var(--border-radius); padding: 25px 30px; margin-bottom: 25px; box-shadow: var(--card-shadow); border: 1px solid var(--border-color); }
+.card h2 { font-size: 1.25rem; font-weight: 600; margin: 0 0 25px 0; color: var(--primary-color); display: flex; align-items: center; gap: 10px; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; }
+.grid-container { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+.grid-2 { grid-template-columns: 1fr 1fr; }
+.subsection { margin-top: 15px; padding-left: 15px; border-left: 3px solid var(--primary-color); }
+
+/* 4. Form Elements */
+label { display: block; margin-bottom: 5px; font-weight: 500; font-size: 0.9rem; color: #343a40; }
+input, select { width: 100%; padding: 12px 15px; border: 1px solid var(--border-color); border-radius: 6px; font-family: inherit; font-size: 1rem; transition: border-color 0.2s, box-shadow 0.2s; }
+input:focus, select:focus { outline: none; border-color: var(--primary-color); box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.25); }
+p#total_amount_display { font-weight: 600; font-size: 1.1rem; color: #212529; }
+
+/* 5. Buttons */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: none; padding: 10px 16px; border-radius: 6px; cursor: pointer; font-size: 0.95rem; font-weight: 500; transition: all 0.2s; }
+.btn-primary { background-color: var(--primary-color); color: white; width: 100%; margin-top: 15px; font-size: 1rem; font-weight: 600; }
+.btn-primary:hover { background-color: var(--primary-hover); transform: translateY(-2px); }
+.btn-primary:disabled { background-color: var(--secondary-color); cursor: not-allowed; transform: none; }
+.btn-secondary { background-color: var(--secondary-color); color: white; }
+.btn-secondary:hover { background-color: var(--secondary-hover); }
+.btn-apply { background-color: var(--success-color); color: white; }
+.btn-apply:hover { background-color: #157347; }
+.btn-apply:disabled { background-color: var(--success-color); opacity: 0.9; cursor: not-allowed; }
+
+/* 6. Results and EMI Section */
+#rec_status { color: var(--text-muted); border-bottom: 1px solid var(--border-color); padding-bottom: 10px; font-size: 1.1rem; }
+#banks_list { list-style-type: none; padding: 0; margin-top: 20px;}
+#banks_list li { padding: 20px; margin-bottom: 15px; border: 1px solid var(--border-color); border-radius: var(--border-radius); background-color: #fff; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; transition: box-shadow 0.2s; }
+#banks_list li:hover { box-shadow: 0 6px 16px rgba(0,0,0,0.1); }
+.bank-details strong { font-size: 1.1rem; color: #212529; }
+.bank-details span { color: var(--text-muted); font-size: 0.9rem; display: block; }
+.bank-actions { display: flex; gap: 10px; flex-shrink: 0; }
+#emi_calculator { margin-top: 25px; padding-top: 20px; border-top: 1px solid var(--border-color); }
+.emi-inputs { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin: 15px 0; }
+.emi-result-text { margin-top: 15px; font-size: 1.2rem; font-weight: 600; color: var(--primary-color); background-color: #e7f1ff; padding: 15px; border-radius: var(--border-radius); text-align: center; }
+
+/* 7. Loader Animation */
+.loader { width: 18px; height: 18px; border: 2px solid #FFF; border-bottom-color: transparent; border-radius: 50%; display: inline-block; animation: rotation 1s linear infinite; }
+@keyframes rotation { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+.hidden { display: none !important; }
+
+/* 8. Responsive Design */
+@media (max-width: 768px) {
+  .grid-2 { grid-template-columns: 1fr; }
+  #banks_list li { flex-direction: column; align-items: flex-start; }
+  .bank-actions { width: 100%; margin-top: 15px; }
+  .bank-actions .btn { flex-grow: 1; }
+  
+  /* Chatbot adjustments for mobile -- REMOVED */
+}
+
+/* 9. Chatbot Styles -- REMOVED */
+
+/*
+ * LOGIN PAGE STYLES
+ * Add these new rules to the end of your /static/style.css file
+*/
+
+/* 1. Apply your background image to the login page */
+body.login-page {
+  background-image: url('/static/img.jpg'); /* Your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* 2. Center the login form on the page */
+.login-container {
+  max-width: 450px;
+  margin: 15vh auto 0; /* '15vh' pushes it down from the top */
+}
+
+/* 3. Style the login card for readability */
+.login-container .card {
+  background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white */
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.login-container .logo-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #333; /* Or your main brand color */
+}
+
+.login-container .logo-login .fas {
+  font-size: 2.5rem;
+  color: #007bff; /* Primary button color */
+}
+
+/* 4. Style the form elements */
+.login-container label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.login-container input[type="email"],
+.login-container input[type="password"] {
+  width: 100%; /* Make inputs fill the space */
+  margin-top: 0.25rem;
+}
+
+.login-container .btn-primary {
+  width: 100%; /* Make the login button full-width */
+  padding: 12px;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.login-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+}
+
+/*
+* (!!!) 10. NEW AI Chatbot Widget Styles (!!!)
+*/
+
+#chat-toggle-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+#chat-toggle-btn:hover {
+  background-color: var(--primary-hover);
+  transform: scale(1.1);
+}
+
+#chatbot-container {
+  position: fixed;
+  bottom: 100px;
+  right: 25px;
+  width: 400px;
+  height: 500px;
+  background: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  /* 'hidden' class (from rule 7) will hide this */
+}
+
+.chatbot-header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatbot-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+#chat-close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 0.8;
+  padding: 0;
+  line-height: 1;
+}
+#chat-close-btn:hover {
+  opacity: 1;
+}
+
+#chat-box {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  line-height: 1.5;
+}
+
+#chat-box p {
+  margin: 0 0 15px 0;
+  font-size: 0.95rem;
+}
+
+#chat-box p b {
+  color: var(--primary-color);
+  display: block; /* Makes 'You:' and 'Bot:' appear on their own line */
+}
+#chat-box p:last-child {
+  margin-bottom: 0;
+}
+
+.chat-input-area {
+  display: flex;
+  border-top: 1px solid var(--border-color);
+  padding: 15px;
+  background: #fff;
+}
+
+.chat-input-area input {
+  flex-grow: 1;
+  border-radius: 6px 0 0 6px;
+  margin: 0;
+  padding: 12px 15px; /* Ensure it matches other inputs */
+}
+
+.chat-input-area button {
+  border: none;
+  background: var(--primary-color);
+  color: white;
+  padding: 0 20px;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 0 6px 6px 0;
+  transition: background-color 0.2s;
+  font-size: 0.95rem;
+}
+
+.chat-input-area button:hover {
+  background: var(--primary-hover);
+}
+
+/* Responsive Chat */
+@media (max-width: 480px) {
+  #chatbot-container {
+    width: 90%;
+    height: 70vh;
+    bottom: 85px;
+    right: 5%;
+  }
+}
