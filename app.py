@@ -27,9 +27,8 @@ app.config['MAIL_DEFAULT_SENDER'] = ('Loan Recommender', 'vinayacharvinu282004@g
 
 mail = Mail(app)
 
-app.config["MONGO_URI"] = "mongodb://localhost:27017/loanDB"
+app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 mongo = PyMongo(app)
-bcrypt = Bcrypt(app)
 
 # ---------------- RULE-BASED BANK DATA ---------------- #
 BANKS = [
@@ -429,3 +428,4 @@ def apply():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
