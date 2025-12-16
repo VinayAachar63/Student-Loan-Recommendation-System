@@ -1,0 +1,7 @@
+flask
+gunicorn
+flask-mail
+flask-pymongo
+flask-bcrypt
+python-dotenv
+gtts
